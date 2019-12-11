@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/FilternNachTextView"
+            android:id="@+id/filternNachTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
@@ -75,121 +75,13 @@
             android:textSize="30sp" />
 
         <TextView
+            android:id="@+id/blackLineTextView"
             android:layout_width="match_parent"
             android:layout_height="2dip"
             android:background="#FF000000" />
 
 
-        <TextView
-            android:id="@+id/AllgemeinTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Allgemein"
-            android:paddingLeft="10dp"
-            android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/FavoritenCheckBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Favoriten" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lokalart"
-            android:paddingLeft="10dp"
-            android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Imbiss" />
-
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Restaurant" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nationalität"
-            android:paddingLeft="10dp"
-            android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/checkBox4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="keine" />
-
-        <CheckBox
-            android:id="@+id/checkBox5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="amerikanisch" />
-
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="australisch" />
-
-        <CheckBox
-            android:id="@+id/checkBox10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="chinesisch" />
-
-        <CheckBox
-            android:id="@+id/checkBox11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="griechisch" />
-
-        <CheckBox
-            android:id="@+id/checkBox13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="italienisch" />
-
-        <CheckBox
-            android:id="@+id/checkBox12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="türkisch" />
-
-        <CheckBox
-            android:id="@+id/checkBox6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="vietnamesisch" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Spezifizierung"
-            android:paddingLeft="10dp"
-            android:textSize="18sp" />
-
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -198,22 +90,131 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/allgemeinTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="Allgemein"
+                    android:textSize="18sp" />
+
                 <CheckBox
-                    android:id="@+id/checkBox7"
+                    android:id="@+id/favoritenCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Favoriten" />
+
+                <TextView
+                    android:id="@+id/lokalArtTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="Lokalart"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/imbissCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Imbiss" />
+
+                <CheckBox
+                    android:id="@+id/restaurantCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Restaurant" />
+
+                <TextView
+                    android:id="@+id/nationalitätTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="Nationalität"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/keineCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="keine" />
+
+                <CheckBox
+                    android:id="@+id/amerikanischCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="amerikanisch" />
+
+                <CheckBox
+                    android:id="@+id/australischCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="australisch" />
+
+                <CheckBox
+                    android:id="@+id/chinesischCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="chinesisch" />
+
+                <CheckBox
+                    android:id="@+id/griechischCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="griechisch" />
+
+                <CheckBox
+                    android:id="@+id/italienischCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="italienisch" />
+
+                <CheckBox
+                    android:id="@+id/türkischCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="türkisch" />
+
+                <CheckBox
+                    android:id="@+id/vietnamesischCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="vietnamesisch" />
+
+                <TextView
+                    android:id="@+id/spezialisierungTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="Spezifizierung"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/fleischgerichteCheckBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Fleischgerichte" />
 
                 <CheckBox
-                    android:id="@+id/checkBox8"
+                    android:id="@+id/vegetarischeGerichteCheckBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Vegetarische Gerichte" />
 
                 <CheckBox
-                    android:id="@+id/checkBox9"
+                    android:id="@+id/veganeGerichteCheckBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
