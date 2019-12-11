@@ -62,9 +62,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map= googleMap;
-        LatLng Maharashtra = new LatLng( 19.169257, 73.341601);
-        map.addMarker(new MarkerOptions().position(Maharashtra).title("Maharashtra"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(Maharashtra));
+        LatLng Derendorf = new LatLng( 51.247952, 6.776465);
+        map.addMarker(new MarkerOptions().position(Derendorf).title("Wilkommen in Derendorf"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(Derendorf));
+
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(Derendorf, 18), 5000, null);
 
 
     }
