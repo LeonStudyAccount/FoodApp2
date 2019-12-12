@@ -1,9 +1,11 @@
 package com.example.foodapp;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
+import android.location.Location;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +23,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     GoogleMap map;
     ImageButton imageButton;
+    Location currentLocation;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +67,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map= googleMap;
-        LatLng Derendorf = new LatLng( 51.247952, 6.776465);
-        map.addMarker(new MarkerOptions().position(Derendorf).title("Wilkommen in Derendorf"));
+        LatLng Derendorf = new LatLng( 51.2480097, 6.7922671);
+        map.addMarker(new MarkerOptions().position(Derendorf).title("Willkommen in Derendorf"));
         map.moveCamera(CameraUpdateFactory.newLatLng(Derendorf));
 
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(Derendorf, 18), 5000, null);
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(Derendorf, 15), 3000, null);
 
 
     }
