@@ -3,17 +3,21 @@ package com.example.foodapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -21,16 +25,19 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     GoogleMap map;
     ImageButton imageButton;
+    Dialog myDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        myDialog = new Dialog(this);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        //DataBase.getAllRestaurants();
 
     }
 
@@ -68,6 +75,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         map.animateCamera(CameraUpdateFactory.newLatLngZoom(Derendorf, 18), 5000, null);
 
+        map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                marker.getTitle();
+                marker.setTitle("Pin");
+                Log.d("Marker Gesetzt",marker.getTitle());
+
+                myDialog.setContentView(R.layout.popupmap);
+                myDialog.show();
+
+
+                return true;
+            }
+        });
 
     }
 }

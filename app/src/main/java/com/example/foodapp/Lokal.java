@@ -18,6 +18,7 @@ public class Lokal {
     private Date menustand;
     private Date eroeffungsdatum;
     private LatLng koordinaten;
+    private Kommentar kommentar;
 
 
     public Lokal(int lokalID, String name, String strasse, int hausnummer, int lokalart, int nation, int spez, Angebot menu, Date menustand, Date eroeffungsdatum, LatLng koordinaten) {
